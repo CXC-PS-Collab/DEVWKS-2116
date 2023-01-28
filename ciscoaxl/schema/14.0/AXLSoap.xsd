@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:axlapi="http://www.cisco.com/AXL/API/12.5" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.cisco.com/AXL/API/12.5" version="12.5">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:axlapi="http://www.cisco.com/AXL/API/14.0" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.cisco.com/AXL/API/14.0" version="14.0">
     <xsd:annotation>
         <xsd:documentation><![CDATA[
 
@@ -15576,7 +15576,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             </xsd:element>
             <xsd:element default="0" minOccurs="0" name="sigDigits" nillable="false">
                 <xsd:annotation>
-                    <xsd:documentation>The value of significantDigits must either from 0 to 32 or 99,Here 99 means ALL.enable attribute is Read-Only.If significantDigits is 0-32 then enable is true,if significantDigits is 99 then enable is false.</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -15822,7 +15822,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
                     </xsd:element>
                     <xsd:element default="0" minOccurs="0" name="sigDigits" nillable="false">
                         <xsd:annotation>
-                            <xsd:documentation>The value of significantDigits must either from 0 to 32 or 99,Here 99 means ALL.enable attribute is Read-Only.If significantDigits is 0-32 then enable is true,if significantDigits is 99 then enable is false.</xsd:documentation>
+                            <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                         </xsd:annotation>
                         <xsd:complexType>
                             <xsd:simpleContent>
@@ -17066,7 +17066,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element default="false" maxOccurs="1" minOccurs="0" name="allowH235PassThrough" nillable="false" type="axlapi:boolean"/>
             <xsd:element default="0" minOccurs="0" name="sigDigits" nillable="false">
                 <xsd:annotation>
-                    <xsd:documentation>The value of significantDigits must either from 0 to 32 or 99,Here 99 means ALL.enable attribute is Read-Only.If significantDigits is 0-32 then enable is true,if significantDigits is 99 then enable is false.</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -17244,7 +17244,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
                     <xsd:element default="false" maxOccurs="1" minOccurs="0" name="allowH235PassThrough" nillable="false" type="axlapi:boolean"/>
                     <xsd:element default="0" minOccurs="0" name="sigDigits" nillable="false">
                         <xsd:annotation>
-                            <xsd:documentation>The value of significantDigits must either from 0 to 32 or 99,Here 99 means ALL.enable attribute is Read-Only.If significantDigits is 0-32 then enable is true,if significantDigits is 99 then enable is false.</xsd:documentation>
+                            <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                         </xsd:annotation>
                         <xsd:complexType>
                             <xsd:simpleContent>
@@ -17865,7 +17865,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             </xsd:element>
             <xsd:element maxOccurs="1" minOccurs="0" name="ringSchedule">
                 <xsd:annotation>
-                    <xsd:documentation>This tag must be used for configuring RingSchedule of RD, this tag will get precendence over todaccess and accesslist tag</xsd:documentation>
+                    <xsd:documentation>This tag must be used for configuring RingSchedule of RD, this tag will get precendence over todaccess and accesslist tag. Passing a blank ringSchedule tag in updateRemoteDestination request will result in setting the time schedule to All the time.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:complexContent>
@@ -18003,7 +18003,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
                         </xsd:sequence>
                         <xsd:element maxOccurs="1" minOccurs="0" name="ringSchedule">
                             <xsd:annotation>
-                                <xsd:documentation>This tag must be used for configuring RingSchedule of RD, this tag will get precendence over todaccess and accesslist tag</xsd:documentation>
+                                <xsd:documentation>This tag must be used for configuring RingSchedule of RD, this tag will get precendence over todaccess and accesslist tag. Passing a blank ringSchedule tag in updateRemoteDestination request will result in setting the time schedule to All the time.</xsd:documentation>
                             </xsd:annotation>
                             <xsd:complexType>
                                 <xsd:complexContent>
@@ -19044,7 +19044,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="1" name="setupNonIsdnPi" nillable="false" type="axlapi:boolean"/>
             <xsd:element minOccurs="1" name="sigDigits" nillable="false">
                 <xsd:annotation>
-                    <xsd:documentation>The value for sigDigits must be between 0 to 32. enable attribute is read only</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -19195,7 +19195,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
                     <xsd:element maxOccurs="1" minOccurs="0" name="setupNonIsdnPi" nillable="false" type="axlapi:boolean"/>
                     <xsd:element minOccurs="0" name="sigDigits" nillable="false">
                         <xsd:annotation>
-                            <xsd:documentation>The value for sigDigits must be between 0 to 32. enable attribute is read only</xsd:documentation>
+                            <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                         </xsd:annotation>
                         <xsd:complexType>
                             <xsd:simpleContent>
@@ -19424,7 +19424,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="1" name="setupNonIsdnPi" nillable="false" type="axlapi:boolean"/>
             <xsd:element minOccurs="1" name="sigDigits" nillable="false">
                 <xsd:annotation>
-                    <xsd:documentation>The value for sigDigits must be between 0 to 32. enable attribute is read only</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -19585,7 +19585,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
                     <xsd:element maxOccurs="1" minOccurs="0" name="setupNonIsdnPi" nillable="false" type="axlapi:boolean"/>
                     <xsd:element minOccurs="0" name="sigDigits" nillable="false">
                         <xsd:annotation>
-                            <xsd:documentation>The value for sigDigits must be between 0 to 32. enable attribute is read only</xsd:documentation>
+                            <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                         </xsd:annotation>
                         <xsd:complexType>
                             <xsd:simpleContent>
@@ -20542,7 +20542,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element default="711ulaw" maxOccurs="1" minOccurs="0" name="tkSipCodec" nillable="false" type="axlapi:XSIPCodec"/>
             <xsd:element default="99" minOccurs="0" name="sigDigits" nillable="true">
                 <xsd:annotation>
-                    <xsd:documentation>The value of sigDigits must be either from 0 to 32 or 99. Here 99 means All. enable attribute is Read-Only. If sigDigits is 0-32 then enable is true, if sigDigits is 99 then enable is false.</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -20793,7 +20793,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
                     <xsd:element default="711ulaw" maxOccurs="1" minOccurs="0" name="tkSipCodec" nillable="false" type="axlapi:XSIPCodec"/>
                     <xsd:element default="99" minOccurs="0" name="sigDigits" nillable="true">
                         <xsd:annotation>
-                            <xsd:documentation>The value of sigDigits must be either from 0 to 32 or 99. Here 99 means All. enable attribute is Read-Only. If sigDigits is 0-32 then enable is true, if sigDigits is 99 then enable is false.</xsd:documentation>
+                            <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                         </xsd:annotation>
                         <xsd:complexType>
                             <xsd:simpleContent>
@@ -32902,7 +32902,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             </xsd:element>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value of significantDigits must either from 0 to 32 or 99,Here 99 means ALL.enable attribute is Read-Only.If significantDigits is 0-32 then enable is true,if significantDigits is 99 then enable is false.</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -33502,7 +33502,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="0" name="allowH235PassThrough" type="axlapi:boolean"/>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value of significantDigits must either from 0 to 32 or 99,Here 99 means ALL.enable attribute is Read-Only.If significantDigits is 0-32 then enable is true,if significantDigits is 99 then enable is false.</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -34061,7 +34061,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="0" name="setupNonIsdnPi" type="axlapi:boolean"/>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value for sigDigits must be between 0 to 32. enable attribute is read only</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -34215,7 +34215,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="0" name="setupNonIsdnPi" type="axlapi:boolean"/>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value for sigDigits must be between 0 to 32. enable attribute is read only</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -34532,7 +34532,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="0" name="tkSipCodec" type="axlapi:XSIPCodec"/>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value of sigDigits must be either from 0 to 32 or 99. Here 99 means All. enable attribute is Read-Only. If sigDigits is 0-32 then enable is true, if sigDigits is 99 then enable is false.</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -41169,7 +41169,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             </xsd:element>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value of significantDigits must either from 0 to 32 or 99,Here 99 means ALL.enable attribute is Read-Only.If significantDigits is 0-32 then enable is true,if significantDigits is 99 then enable is false.</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -41870,7 +41870,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="0" name="allowH235PassThrough" type="axlapi:boolean"/>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value of significantDigits must either from 0 to 32 or 99,Here 99 means ALL.enable attribute is Read-Only.If significantDigits is 0-32 then enable is true,if significantDigits is 99 then enable is false.</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -42257,7 +42257,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             </xsd:element>
             <xsd:element maxOccurs="1" minOccurs="0" name="ringSchedule">
                 <xsd:annotation>
-                    <xsd:documentation>This tag must be used for configuring RingSchedule of RD, this tag will get precendence over todaccess and accesslist tag</xsd:documentation>
+                    <xsd:documentation>This tag must be used for configuring RingSchedule of RD, this tag will get precendence over todaccess and accesslist tag. Passing a blank ringSchedule tag in updateRemoteDestination request will result in setting the time schedule to All the time.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:sequence minOccurs="0">
@@ -42608,7 +42608,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="0" name="setupNonIsdnPi" type="axlapi:boolean"/>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value for sigDigits must be between 0 to 32. enable attribute is read only</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -42768,7 +42768,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="0" name="setupNonIsdnPi" type="axlapi:boolean"/>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value for sigDigits must be between 0 to 32. enable attribute is read only</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -43125,7 +43125,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="0" name="tkSipCodec" type="axlapi:XSIPCodec"/>
             <xsd:element minOccurs="0" name="sigDigits">
                 <xsd:annotation>
-                    <xsd:documentation>The value of sigDigits must be either from 0 to 32 or 99. Here 99 means All. enable attribute is Read-Only. If sigDigits is 0-32 then enable is true, if sigDigits is 99 then enable is false.</xsd:documentation>
+                    <xsd:documentation>The value of significantDigits must be between 0 to 32 or 99. In axl, 99 is corresponding to All (on gui) because for integer type database field "All" is not a valid value. Enable is a Read-Only attribute, so if value of significantDigits is between 0 to 32 then enable is true and if significantDigits is 99 then enable is false.</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:simpleContent>
@@ -45877,11 +45877,33 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             </xsd:extension>
         </xsd:complexContent>
     </xsd:complexType>
-    <xsd:complexType name="OXEnduserMember">
-        <xsd:sequence minOccurs="0"/>
+    <xsd:complexType name="OXBusyLampField">
+        <xsd:sequence minOccurs="0">
+            <xsd:choice minOccurs="0">
+                <xsd:sequence minOccurs="0">
+                    <xsd:element maxOccurs="1" minOccurs="0" name="blfDirn" type="axlapi:String255">
+                        <xsd:annotation>
+                            <xsd:documentation>Either blfDest or the combination of blfDirn and routePartition is to be mentioned in the add/update request, if both are mentioned AXL will read only the blfDest tag and ignore blfDirn and routePartition.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element maxOccurs="1" minOccurs="0" name="routePartition" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:choice>
+        </xsd:sequence>
     </xsd:complexType>
-    <xsd:complexType name="OREnduserMember">
-        <xsd:sequence minOccurs="0"/>
+    <xsd:complexType name="ORBusyLampField">
+        <xsd:sequence minOccurs="0">
+            <xsd:choice minOccurs="0">
+                <xsd:sequence minOccurs="0">
+                    <xsd:element maxOccurs="1" minOccurs="0" name="blfDirn" type="axlapi:String255">
+                        <xsd:annotation>
+                            <xsd:documentation>Either blfDest or the combination of blfDirn and routePartition is to be mentioned in the add/update request, if both are mentioned AXL will read only the blfDest tag and ignore blfDirn and routePartition.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element maxOccurs="1" minOccurs="0" name="routePartition" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:choice>
+        </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="OXNumplanIdentifier">
         <xsd:sequence minOccurs="0"/>
@@ -45889,12 +45911,134 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
     <xsd:complexType name="ORNumplanIdentifier">
         <xsd:sequence minOccurs="0"/>
     </xsd:complexType>
+    <xsd:complexType name="OXBLFDirectedCallPark">
+        <xsd:sequence minOccurs="0">
+            <xsd:choice minOccurs="0">
+                <xsd:element maxOccurs="1" minOccurs="0" name="directedCallParkId" type="axlapi:XUUID">
+                    <xsd:annotation>
+                        <xsd:documentation>Only the uuid attribute is read</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="directedCallParkDnAndPartition">
+                    <xsd:complexType>
+                        <xsd:sequence minOccurs="0">
+                            <xsd:element maxOccurs="1" minOccurs="0" name="dnPattern" type="axlapi:String255"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="routePartitionName" type="axlapi:OXFkType"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:choice>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ORBLFDirectedCallPark">
+        <xsd:sequence minOccurs="0">
+            <xsd:choice minOccurs="0">
+                <xsd:element maxOccurs="1" minOccurs="0" name="directedCallParkId" type="axlapi:XUUID">
+                    <xsd:annotation>
+                        <xsd:documentation>Only the uuid attribute is read</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="directedCallParkDnAndPartition">
+                    <xsd:complexType>
+                        <xsd:sequence minOccurs="0">
+                            <xsd:element maxOccurs="1" minOccurs="0" name="dnPattern" type="axlapi:String255"/>
+                            <xsd:element maxOccurs="1" minOccurs="0" name="routePartitionName" type="axlapi:ORFkType"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:choice>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OXCallForwardNotRegistered">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ORCallForwardNotRegistered">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OXCallForwardNotRegisteredInt">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ORCallForwardNotRegisteredInt">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OXCallForwardNoAnswerInt">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ORCallForwardNoAnswerInt">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OXCallForwardAlternateParty">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ORCallForwardAlternateParty">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OXCallForwardAll">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
+            <xsd:element maxOccurs="1" minOccurs="0" name="secondaryCallingSearchSpaceName" type="axlapi:OXFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ORCallForwardAll">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
+            <xsd:element maxOccurs="1" minOccurs="0" name="secondaryCallingSearchSpaceName" type="axlapi:ORFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OXCallForwardNoCoverage">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ORCallForwardNoCoverage">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OXDirn">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="routePartitionName" type="axlapi:OXFkType"/>
+        </xsd:sequence>
+        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
+    </xsd:complexType>
+    <xsd:complexType name="ORDirn">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="routePartitionName" type="axlapi:ORFkType"/>
+        </xsd:sequence>
+        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
+    </xsd:complexType>
     <xsd:complexType name="OXCallForwardNoAnswer">
         <xsd:sequence minOccurs="0">
             <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ORCallForwardNoAnswer">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OXCallForwardNoCoverageInt">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ORCallForwardNoCoverageInt">
         <xsd:sequence minOccurs="0">
             <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
         </xsd:sequence>
@@ -45909,6 +46053,44 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
             <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
         </xsd:sequence>
     </xsd:complexType>
+    <xsd:complexType name="OXDirectoryUri">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="axlapi:OXFkType"/>
+        </xsd:sequence>
+        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
+    </xsd:complexType>
+    <xsd:complexType name="ORDirectoryUri">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="axlapi:ORFkType"/>
+        </xsd:sequence>
+        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
+    </xsd:complexType>
+    <xsd:complexType name="OXAddOnModule">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="model" type="axlapi:OXFkTypeProduct_Protocol">
+                <xsd:annotation>
+                    <xsd:documentation>Model ID string.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
+    </xsd:complexType>
+    <xsd:complexType name="ORAddOnModule">
+        <xsd:sequence minOccurs="0">
+            <xsd:element maxOccurs="1" minOccurs="0" name="model" type="axlapi:ORFkType">
+                <xsd:annotation>
+                    <xsd:documentation>Model ID string.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
+    </xsd:complexType>
+    <xsd:complexType name="OXSpeeddial">
+        <xsd:sequence minOccurs="0"/>
+    </xsd:complexType>
+    <xsd:complexType name="ORSpeeddial">
+        <xsd:sequence minOccurs="0"/>
+    </xsd:complexType>
     <xsd:complexType name="OXCallForwardBusyInt">
         <xsd:sequence minOccurs="0">
             <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
@@ -45918,6 +46100,12 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
         <xsd:sequence minOccurs="0">
             <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
         </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OXEnduserMember">
+        <xsd:sequence minOccurs="0"/>
+    </xsd:complexType>
+    <xsd:complexType name="OREnduserMember">
+        <xsd:sequence minOccurs="0"/>
     </xsd:complexType>
     <xsd:complexType name="OXPhoneLine">
         <xsd:sequence minOccurs="0">
@@ -46003,56 +46191,6 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
         <xsd:attribute name="ctiid" type="xsd:nonNegativeInteger"/>
         <xsd:attribute name="uuid" type="axlapi:XUUID"/>
     </xsd:complexType>
-    <xsd:complexType name="OXDirn">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="routePartitionName" type="axlapi:OXFkType"/>
-        </xsd:sequence>
-        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
-    </xsd:complexType>
-    <xsd:complexType name="ORDirn">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="routePartitionName" type="axlapi:ORFkType"/>
-        </xsd:sequence>
-        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
-    </xsd:complexType>
-    <xsd:complexType name="OXBLFDirectedCallPark">
-        <xsd:sequence minOccurs="0">
-            <xsd:choice minOccurs="0">
-                <xsd:element maxOccurs="1" minOccurs="0" name="directedCallParkId" type="axlapi:XUUID">
-                    <xsd:annotation>
-                        <xsd:documentation>Only the uuid attribute is read</xsd:documentation>
-                    </xsd:annotation>
-                </xsd:element>
-                <xsd:element maxOccurs="1" minOccurs="0" name="directedCallParkDnAndPartition">
-                    <xsd:complexType>
-                        <xsd:sequence minOccurs="0">
-                            <xsd:element maxOccurs="1" minOccurs="0" name="dnPattern" type="axlapi:String255"/>
-                            <xsd:element maxOccurs="1" minOccurs="0" name="routePartitionName" type="axlapi:OXFkType"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-            </xsd:choice>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ORBLFDirectedCallPark">
-        <xsd:sequence minOccurs="0">
-            <xsd:choice minOccurs="0">
-                <xsd:element maxOccurs="1" minOccurs="0" name="directedCallParkId" type="axlapi:XUUID">
-                    <xsd:annotation>
-                        <xsd:documentation>Only the uuid attribute is read</xsd:documentation>
-                    </xsd:annotation>
-                </xsd:element>
-                <xsd:element maxOccurs="1" minOccurs="0" name="directedCallParkDnAndPartition">
-                    <xsd:complexType>
-                        <xsd:sequence minOccurs="0">
-                            <xsd:element maxOccurs="1" minOccurs="0" name="dnPattern" type="axlapi:String255"/>
-                            <xsd:element maxOccurs="1" minOccurs="0" name="routePartitionName" type="axlapi:ORFkType"/>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-            </xsd:choice>
-        </xsd:sequence>
-    </xsd:complexType>
     <xsd:complexType name="OXSubscribedService">
         <xsd:sequence minOccurs="0">
             <xsd:element maxOccurs="1" minOccurs="0" name="telecasterServiceName" type="axlapi:OXFkType"/>
@@ -46065,150 +46203,12 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
         </xsd:sequence>
         <xsd:attribute name="uuid" type="axlapi:XUUID"/>
     </xsd:complexType>
-    <xsd:complexType name="OXCallForwardNoCoverageInt">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ORCallForwardNoCoverageInt">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="OXCallForwardAll">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="secondaryCallingSearchSpaceName" type="axlapi:OXFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ORCallForwardAll">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
-            <xsd:element maxOccurs="1" minOccurs="0" name="secondaryCallingSearchSpaceName" type="axlapi:ORFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="OXCallForwardAlternateParty">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ORCallForwardAlternateParty">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="OXCallForwardNotRegisteredInt">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ORCallForwardNotRegisteredInt">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="OXCallForwardNotRegistered">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ORCallForwardNotRegistered">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="OXBusyLampField">
-        <xsd:sequence minOccurs="0">
-            <xsd:choice minOccurs="0">
-                <xsd:sequence minOccurs="0">
-                    <xsd:element maxOccurs="1" minOccurs="0" name="blfDirn" type="axlapi:String255">
-                        <xsd:annotation>
-                            <xsd:documentation>Either blfDest or the combination of blfDirn and routePartition is to be mentioned in the add/update request, if both are mentioned AXL will read only the blfDest tag and ignore blfDirn and routePartition.</xsd:documentation>
-                        </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element maxOccurs="1" minOccurs="0" name="routePartition" type="xsd:string"/>
-                </xsd:sequence>
-            </xsd:choice>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ORBusyLampField">
-        <xsd:sequence minOccurs="0">
-            <xsd:choice minOccurs="0">
-                <xsd:sequence minOccurs="0">
-                    <xsd:element maxOccurs="1" minOccurs="0" name="blfDirn" type="axlapi:String255">
-                        <xsd:annotation>
-                            <xsd:documentation>Either blfDest or the combination of blfDirn and routePartition is to be mentioned in the add/update request, if both are mentioned AXL will read only the blfDest tag and ignore blfDirn and routePartition.</xsd:documentation>
-                        </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element maxOccurs="1" minOccurs="0" name="routePartition" type="xsd:string"/>
-                </xsd:sequence>
-            </xsd:choice>
-        </xsd:sequence>
-    </xsd:complexType>
     <xsd:complexType name="OXCallForwardOnFailure">
         <xsd:sequence minOccurs="0">
             <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ORCallForwardOnFailure">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="OXDirectoryUri">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="axlapi:OXFkType"/>
-        </xsd:sequence>
-        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
-    </xsd:complexType>
-    <xsd:complexType name="ORDirectoryUri">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="partition" type="axlapi:ORFkType"/>
-        </xsd:sequence>
-        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
-    </xsd:complexType>
-    <xsd:complexType name="OXAddOnModule">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="model" type="axlapi:OXFkTypeProduct_Protocol">
-                <xsd:annotation>
-                    <xsd:documentation>Model ID string.</xsd:documentation>
-                </xsd:annotation>
-            </xsd:element>
-        </xsd:sequence>
-        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
-    </xsd:complexType>
-    <xsd:complexType name="ORAddOnModule">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="model" type="axlapi:ORFkType">
-                <xsd:annotation>
-                    <xsd:documentation>Model ID string.</xsd:documentation>
-                </xsd:annotation>
-            </xsd:element>
-        </xsd:sequence>
-        <xsd:attribute name="uuid" type="axlapi:XUUID"/>
-    </xsd:complexType>
-    <xsd:complexType name="OXSpeeddial">
-        <xsd:sequence minOccurs="0"/>
-    </xsd:complexType>
-    <xsd:complexType name="ORSpeeddial">
-        <xsd:sequence minOccurs="0"/>
-    </xsd:complexType>
-    <xsd:complexType name="OXCallForwardNoCoverage">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ORCallForwardNoCoverage">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="OXCallForwardNoAnswerInt">
-        <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:OXFkType"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <xsd:complexType name="ORCallForwardNoAnswerInt">
         <xsd:sequence minOccurs="0">
             <xsd:element maxOccurs="1" minOccurs="0" name="callingSearchSpaceName" type="axlapi:ORFkType"/>
         </xsd:sequence>
@@ -52800,28 +52800,27 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
                 <xsd:annotation>
                         <xsd:documentation>This allows to change or modify the transport settings</xsd:documentation>
                 </xsd:annotation>
-			<xsd:sequence>
-                        	<xsd:element minOccurs="1" name="transportMode" type="axlapi:String255"/>
-				<xsd:element minOccurs="1" name="url" type="axlapi:String255"/>
-			  	<xsd:element minOccurs="1" name="httpHost" type="axlapi:String255"/>
-			     	<xsd:element minOccurs="1" name="httpPort" type="axlapi:String255"/>
-                        	<xsd:element minOccurs="0" name="enableProxyAuthentication" type="axlapi:String255">
-					<xsd:annotation>
-                        			<xsd:documentation>This tag is required to be set to true for authentication based proxy server configuration</xsd:documentation>
-                        		</xsd:annotation>
-                        	</xsd:element>
-                        
-                        	<xsd:element minOccurs="0" name="proxyUserName" type="axlapi:String255">
-					<xsd:annotation>
-						<xsd:documentation>This tag is required to be set when enableProxyAuthentication tag is true</xsd:documentation>
-					</xsd:annotation>
-				</xsd:element>
-                        	<xsd:element minOccurs="0" name="proxyPassword" type="axlapi:String255">
-					<xsd:annotation>
-						<xsd:documentation>This tag is required to be set when enableProxyAuthentication tag is true</xsd:documentation>
-					</xsd:annotation>
-				</xsd:element>
-                	</xsd:sequence>
+		<xsd:sequence>
+                        <xsd:element minOccurs="1" name="transportMode" type="axlapi:String255"/>
+			<xsd:element minOccurs="1" name="url" type="axlapi:String255"/>
+			<xsd:element minOccurs="1" name="httpHost" type="axlapi:String255"/>
+			<xsd:element minOccurs="1" name="httpPort" type="axlapi:String255"/>
+                        <xsd:element minOccurs="0" name="enableProxyAuthentication" type="axlapi:String255">
+				<xsd:annotation>
+					<xsd:documentation>This tag is required to be set to true for authentication based proxy server configuration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+                        <xsd:element minOccurs="0" name="proxyUserName" type="axlapi:String255">
+                                <xsd:annotation>
+                                        <xsd:documentation>This tag is required to be set when enableProxyAuthentication tag is true</xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="proxyPassword" type="axlapi:String255">
+                                <xsd:annotation>
+                                        <xsd:documentation>This tag is required to be set when enableProxyAuthentication tag is true</xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                </xsd:sequence>
         </xsd:complexType>
     <xsd:element name="doUpdateTransportSettings" type="axlapi:DoUpdateTransportSettingsReq"/>
     <xsd:complexType name="DoUpdateTransportSettingsRes">
@@ -54399,9 +54398,9 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
 			<xsd:enumeration value="VG-6FXS/6FXO-SCCP"/>
 			<xsd:enumeration value="SM-X-72FXS-SIP"/>
 			<xsd:enumeration value="SM-X-56FXS-SIP"/>
-			<xsd:enumeration value="SM-X-16FXS-SIP"/>
-			<xsd:enumeration value="SM-X-24FXS-SIP"/>
-			<xsd:enumeration value="SM-X-8FXS-SIP"/>
+			<xsd:enumeration value="SM-X-16FXS/2FXO-SIP"/>
+			<xsd:enumeration value="SM-X-24FXS/4FXO-SIP"/>
+			<xsd:enumeration value="SM-X-8FXS/12FXO-SIP"/>
 			<xsd:enumeration value="NIM-2FXS-SIP"/>
 			<xsd:enumeration value="NIM-4FXS-SIP"/>
 			<xsd:enumeration value="NIM-2FXS/4FXO-SIP"/>
@@ -54414,6 +54413,10 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
 			<xsd:enumeration value="SM-V-144FXS-SIP"/>
 			<xsd:enumeration value="SM-V-132FXS/6FXO-SIP"/>
 			<xsd:enumeration value="SM-V-84FXS/6FXO-SIP"/>
+			<xsd:enumeration value="VG-8FXS-SIP"/>
+			<xsd:enumeration value="VG-2FXS/2FXO-SIP"/>
+			<xsd:enumeration value="VG-4FXS/4FXO-SIP"/>
+			<xsd:enumeration value="VG-6FXS/6FXO-SIP"/>
 		</xsd:restriction>
             </xsd:simpleType>
             <xsd:simpleType>
@@ -54730,6 +54733,13 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
 			<xsd:enumeration value="Cisco Webex Room 70 Panorama"/>
 			<xsd:enumeration value="Cisco Webex Room Phone"/>
 			<xsd:enumeration value="Cisco 860"/>
+			<xsd:enumeration value="Cisco 840"/>
+			<xsd:enumeration value="Cisco Webex Desk LE"/>
+			<xsd:enumeration value="Cisco Webex Desk"/>
+			<xsd:enumeration value="Cisco Webex Desk Mini"/>
+			<xsd:enumeration value="Cisco Webex Desk Hub"/>
+			<xsd:enumeration value="Cisco Webex Board Pro 55"/>
+			<xsd:enumeration value="Cisco Webex Board Pro 75"/>
 		</xsd:restriction>
             </xsd:simpleType>
             <xsd:simpleType>
@@ -55506,7 +55516,14 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
 			<xsd:enumeration value="Cisco Webex Room 70 Panorama"/>
 			<xsd:enumeration value="Cisco Webex Room Phone"/>
 			<xsd:enumeration value="Cisco 860"/>
+			<xsd:enumeration value="Cisco 840"/>
 			<xsd:enumeration value="VG420"/>
+			<xsd:enumeration value="Cisco Webex Desk LE"/>
+			<xsd:enumeration value="Cisco Webex Desk"/>
+			<xsd:enumeration value="Cisco Webex Desk Mini"/>
+			<xsd:enumeration value="Cisco Webex Desk Hub"/>
+			<xsd:enumeration value="Cisco Webex Board Pro 55"/>
+			<xsd:enumeration value="Cisco Webex Board Pro 75"/>
 		</xsd:restriction>
             </xsd:simpleType>
             <xsd:simpleType>
